@@ -4,9 +4,9 @@ This repository contains code for calculating lower crustal density by comparing
 
 # Code Structure
 
-RSVRTmatrix: Computes the theoretical P-to-Ps transmission coefficient.
-Trancoeff: Compares the actual and theoretical P-to-Ps transmission coefficients.
-reverb_Trans: Reads all the input files, and return the outputs.
+RSVRTmatrix: Computes the theoretical P-to-Ps transmission coefficient.  
+Trancoeff: Compares the actual and theoretical P-to-Ps transmission coefficients.  
+reverb_Trans: Reads all the input files, and return the outputs.  
 
 # Getting Started
 

@@ -22,11 +22,15 @@ Execute the reverb_Trans program with the following command:
 
 Parameters
 -V : The input velocity model.
+
 -C : The actual P-to-Ps transmission coefficient.
+
 -D : The threshold that can be used to decide the output.
+
 -R : Lower band of lower crustal density / Upper mantle density / The upper bound of lower crustal density / Interval.
--M : The interpolation method.
+
 -S : Input receiver function.
+
 -O : Output result.
 
 Output

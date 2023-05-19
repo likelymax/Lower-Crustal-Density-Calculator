@@ -34,6 +34,7 @@ float *Trancoeff(float vel_p[max], float vel_vpvs[max], int end,  float ratio, f
     static float density[RDO], trans[RDO];
     float T,  tmp_T = 0, diff, tmp_diff = diff_range;
     int i = 0, out, judge = 0;
+    FILE *ft;
     output[0] = output[1] = output[2] = output[3]= output[4] = output[5] = output[6] = 0;
     for (i = 0; i< end; i++){
         vel_s[i] = vel_p[i]/vel_vpvs[i];

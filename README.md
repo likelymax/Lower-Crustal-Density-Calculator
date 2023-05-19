@@ -2,7 +2,7 @@
 
 This repository contains code for calculating lower crustal density by comparing theoretical and actual P-to-Ps transmission coefficients. The code is written in C and comprises different components for various calculations. The theoretical coefficient is based on Aki & Richards (2002) Eqns 5.39 and 5.40.
 
-__Code Structure__
+**Code Structure**
 
 RSVRTmatrix: Computes the theoretical P-to-Ps transmission coefficient.  
 Trancoeff: Compares the actual and theoretical P-to-Ps transmission coefficients.  

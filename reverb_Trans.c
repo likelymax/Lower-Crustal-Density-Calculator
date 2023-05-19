@@ -44,27 +44,6 @@
 #include "Tran.h"
 #define MAX 150
 
-// double gaussrand(float sigma, float mu)
-// {
-//     static double U, V;
-//     static int phase = 0;
-//     double z;
-//     if(phase == 0)
-//     {
-//         U = rand() / (RAND_MAX + 1.0);
-//         V = rand() / (RAND_MAX + 1.0);
-//         z = sqrt(-2.0 * log(U))* sin(2.0 * PI * V);
-//     }
-//     else
-//     {
-//     z = sqrt(-2.0 * log(U)) * cos(2.0 * PI * V);
-//     }
-
-//     phase = 1 - phase;
-//     z = mu + (z*sigma);
-//     return z;
-// }
-
 int main(int argc, char **argv){
     int i, error = 0, dir, tot;
     char sac[128], output[128],velocity[128], longitude[128], latitude[128];
@@ -128,16 +107,7 @@ int main(int argc, char **argv){
     }
     float ve_sinc = vel_p[i-2]/vel_vpvs[i-2];
     float ve_stra = vel_p[i-3]/vel_vpvs[i-3];
-    // if (p > 1/vel_p[i-2] && p < 1/ve_sinc) incid_p = 1;
-    // if (p > 1/ve_sinc){
-    //     incid_p = 1;
-    //     incid_s = 1;
-    // }
-    // if (p > 1/vel_p[i-3] && p < 1/ve_stra) trans_p = 1;
-    // if (p > 1/ve_stra){
-    //     trans_p = 1;
-    //     trans_s = 1;
-    // }
+
     if (p > 1/vel_p[i-2] && p < 1/ve_sinc){
         printf("wrong incident P\n");
         return -1;
@@ -158,16 +128,7 @@ int main(int argc, char **argv){
     float dif_tmp, den1, T1, den2, T2, mantle = rho2, max_dense, output_mantle, mantle_high, diff1, diff2;
     T1 = (*output_T)[0];
     den1 = (*output_T)[1];
-    // diff1 = (*output_T)[2];
-    // T2 = (*output_T)[3]; 
-    // den2 = (*output_T)[4];
-    // diff2 = (*output_T)[5];
-    // max_dense = (*output_T)[6];
-    // mantle_high = 3700;
-    // mantle=rho2;
-    // float dif_tmp1;
     fprintf(fo,"%f\n", den1);
  
-    // fprintf(fo,"%f %f %f %f %f %f %d %d %d %d %f %f\n", den1, T1, den2, T2, output_mantle, p, incid_p, incid_s, trans_p, trans_s, diff1, diff2);
     return 0;
 }

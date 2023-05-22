@@ -1,0 +1,4 @@
+* linguist-detectable=false
+*.py linguist-detectable=true
+*.c linguist-detectable=true
+*.sh linguist-detectable=true
